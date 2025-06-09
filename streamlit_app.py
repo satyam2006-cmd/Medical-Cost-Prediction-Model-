@@ -65,7 +65,7 @@ else:
 # ------------------ Title ------------------
 st.markdown("<div class='title'>💊 Medical Insurance Cost Predictor</div>", unsafe_allow_html=True)
 st.markdown("Use this simple tool to estimate medical insurance costs based on personal health details.")
-st.image("medical_cost_prediction_model.png", width=80)
+st.image("https://github.com/satyam2006-cmd/Medical-Cost-Prediction-Model-/blob/main/medical_cost_prediction_model.png?raw=true", width=80)
 # ------------------ Input Layout ------------------
 col1, col2 = st.columns(2)
 

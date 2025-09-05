@@ -2,6 +2,8 @@
 
 This repository contains a machine learning project focused on predicting medical insurance costs based on various inputs such as age, BMI, smoking status, and region. The goal is to build and deploy a model that can accurately estimate the insurance premium for an individual given their characteristics.
 
+Streamlit link - https://medicalcostpredictionmodel.streamlit.app/
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)

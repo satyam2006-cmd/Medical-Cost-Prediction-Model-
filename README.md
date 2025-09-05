@@ -4,6 +4,9 @@ This repository contains a machine learning project focused on predicting medica
 
 Streamlit link - https://medicalcostpredictionmodel.streamlit.app/
 
+Built and fine-tuned by [Satyam Bhagat](https://github.com/satyam2006-cmd).
+
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)

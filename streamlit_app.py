@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import pickle
@@ -10,63 +9,67 @@ with open('medical_cost_prediction_model.pkl', 'rb') as f:
 # ------------------ Page Setup ------------------
 st.set_page_config(page_title="Medical Insurance Cost Predictor", layout="centered")
 
-# ------------------ Theme Toggle ------------------
-theme = st.selectbox("🎨 Choose Theme", ["Light", "Dark"], index=1)
-
-if theme == "Dark":
-    st.markdown("""
-        <style>
-        .stApp {
-            background-color: #0e1117;
-            color: #FAFAFA;
-            font-family: 'Segoe UI', sans-serif;
-        }
-        .title {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: #4db8ff;
-        }
-        .prediction-box {
-            background-color: #1c1e24;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
-            color: #FAFAFA;
-        }
-        label, .css-1cpxqw2, .st-bw, .st-cy, .st-em {
-            color: #FAFAFA !important;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-else:
-    st.markdown("""
-        <style>
-        .stApp {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 2rem;
-        }
-        .title {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: #3366cc;
-        }
-        .prediction-box {
-            background-color: #e8f0fe;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-        }
-        </style>
-    """, unsafe_allow_html=True)
+# ------------------ Dark Theme Styling + Background ------------------
+st.markdown("""
+    <style>
+    .stApp {
+        background: linear-gradient(rgba(14,17,23,0.85), rgba(14,17,23,0.85)),
+                    url('https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61804.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #FAFAFA;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .title {
+        font-size: 2.4rem;
+        font-weight: bold;
+        color: #4db8ff;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #cccccc;
+        margin-bottom: 1.5rem;
+    }
+    .top-image {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    .top-image img {
+        width: 120px;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        background-color: #1c1e24;
+        padding: 10px;
+    }
+    .prediction-box {
+        background-color: rgba(28,30,36,0.9);
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        color: #FAFAFA;
+    }
+    label, .css-1cpxqw2, .st-bw, .st-cy, .st-em {
+        color: #FAFAFA !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # ------------------ Title ------------------
 st.markdown("<div class='title'>💊 Medical Insurance Cost Predictor</div>", unsafe_allow_html=True)
-st.markdown("Use this simple tool to estimate medical insurance costs based on personal health details.")
-st.image("https://github.com/satyam2006-cmd/Medical-Cost-Prediction-Model-/blob/main/medical_cost_prediction_model.png?raw=true", width=80)
+st.markdown("<div class='subtitle'>Estimate your annual insurance cost based on health and lifestyle factors.</div>", unsafe_allow_html=True)
+
+# ------------------ Top Image ------------------
+st.markdown("""
+<div class="top-image">
+    <img src="https://github.com/satyam2006-cmd/Medical-Cost-Prediction-Model-/blob/main/medical_cost_prediction_model.png?raw=true" alt="Medical Cost Predictor Logo">
+</div>
+""", unsafe_allow_html=True)
+
 # ------------------ Input Layout ------------------
 col1, col2 = st.columns(2)
 
